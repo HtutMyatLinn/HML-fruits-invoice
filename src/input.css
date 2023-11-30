@@ -1,0 +1,26 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Padauk:wght@400;700&family=Poppins&family=Rubik:wght@400;500;600&family=Sofia+Sans+Condensed:ital,wght@0,300;1,300;1,400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("../node_modules/sweetalert2/dist/sweetalert2.css");
+
+body{
+    counter-reset: recordIndex;
+
+}
+
+.swal2-confirm{
+    @apply bg-blue-600 !important
+};
+
+.swal2-cancel{
+    @apply bg-red-600 text-white !important
+};
+
+.td-counter::before{
+    counter-increment: recordIndex;
+    content: counter(recordIndex);
+};
+
